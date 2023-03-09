@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[V2.0][Thực hành] 2. Sử dụng toán tử Tính diện tích hình chữa nhật
+    </title>
+    <script src="main.js"></script>
+
+</head>
+<body>
+<!--Cách 1 sử dụng DOM-->
+<H1>Tính diện tích hình chữ nhật</H1>
+<label>Nhập chiều rông của hình chữ nhật</label>
+<input type="number" id="width"><br>
+<label>Nhập chiều cao của hình chữ nhật</label>
+<input type="number" id="heigth"><br>
+<button onclick="dienTichHinhChuNhat()">Tính diện tích của hình chữa nhật</button>
+<h2 style="color: deeppink" id="area">  </h2>
+<br>
+<script>
+    function dienTichHinhChuNhat() {
+        let width = +document.getElementById('width').value;
+        console.log('Chiều rông hình chữ nhật = ', width);
+        let heigth = +document.getElementById('heigth').value;
+        console.log('Chiều cao của hình chữ nhật bằng =', heigth);
+        let area = width * heigth;
+        console.log('Diện tích hình chữ nhật là: ', area);
+        document.getElementById('area').innerHTML = 'Diện tích của hình chữ nhật là: ' + area;
+    }
+
+    // <!--  CÁCH 2-->DUNG JS THUẦN -->ĐUNG CÁC THẺ NHẬP SUẤT CỦA JS NHƯ LÀ promp t docimen . w rite
+    let width = +prompt('Nhập chiều rộng của hình chữa nhật: ');
+        let  heigth = +prompt('Nahapj chiều cao của hình chữa nhật: ');
+        let area = width*heigth
+        console.log('Diện tích của hình chữ nhật là: ', area);
+        alert('Diện tích của hình chữ nhật là: ' + area);    <-- in diện tích ra 2 lần thoe thứ tự
+        document.write('Diện tích của hình chữ nhật là: ' + area);
+
+     // ===>>SỬ DỤNG TRONG FILE main.js
+        let inputWidth;
+        let inputHeigth;
+        inputWidth = +prompt('Enter the width');
+        inputHeigth = +prompt('Enter the heigth');
+        let area = inputWidth*inputHeigth;
+        document.write('The area is: ' + area);
+
+</script>
+</body>
+</html>
